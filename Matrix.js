@@ -1,6 +1,3 @@
-
-
-
 class Matrix {
     static row = 0;
     static elem = 0;
@@ -25,7 +22,7 @@ class Matrix {
                 context.fillStyle = "Green";
                 break;
             case 1:
-                context.fillStyle = "Black";
+                context.fillStyle = "Blue";
                 break;
             case 2:
                 context.fillStyle = "Yellow";

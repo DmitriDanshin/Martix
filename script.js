@@ -1,11 +1,16 @@
+const options = {
+        type: 'random',
+        min: 0,
+        max: 2,
+        rows:20,
+        columns: 50,
+}
+
+const matrixObj = new MatrixConstructor(options);
+const randomMatrix = matrixObj.getRandomFilledMatrix();
+console.log(randomMatrix);
 const matrix = new Matrix('cnv', '#app',
-    [
-        [1, 1, 1, 1, 0, 0, 0], [0, 0, 0, 1, 1, 1, 1],
-        [1, 1, 1, 1, 0, 0, 0], [0, 0, 0, 1, 1, 1, 1],
-        [1, 1, 1, 1, 0, 0, 0], [0, 2, 2, 1, 1, 1, 1],
-        [1, 1, 1, 1, 0, 0, 2], [0, 0, 2, 2, 1, 1, 1],
-        [1, 1, 1, 1, 0, 0, 0], [0, 0, 0, 1, 1, 1, 1],
-    ], 5
+    randomMatrix, 5
 );
 
 matrix.render();
