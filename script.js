@@ -1,9 +1,9 @@
 const options = {
-        type: 'random',
-        min: 0,
-        max: 2,
-        rows:32,
-        columns: 64,
+    type: 'random',
+    min: 0,
+    max: 2,
+    rows: 32,
+    columns: 64,
 }
 
 const matrixObj = new MatrixConstructor(options);
@@ -14,25 +14,27 @@ const matrix = new Matrix('cnv', '#app',
 
 matrix.render();
 matrix.drawMatrix();
-function random(){
-        setInterval(()=>{
-                let rand = new MatrixConstructor(options).getRandomFilledMatrix();
-                matrix.drawMatrix(rand);
-                console.log('ok');
-        }, 2000);
+
+function random() {
+    setInterval(() => {
+        let rand = new MatrixConstructor(options).getRandomFilledMatrix();
+        matrix.drawMatrix(rand);
+        console.log('ok');
+    }, 2000);
 }
 
-function sort(){
-        let x = 0;
-        setInterval(()=>{
-                let myArray= randomMatrix[x];
-                if (!myArray) return null;
-                myArray.sort((a,b) => b - a );
-                randomMatrix[x] = myArray;
-                matrix.drawMatrix(randomMatrix);
+function sort() {
+    let x = 0;
+    setInterval(() => {
+        let myArray = randomMatrix[x];
+        if (!myArray) return null;
+        myArray.sort((a, b) => b - a);
+        randomMatrix[x] = myArray;
+        matrix.drawMatrix(randomMatrix);
 
-                x++;
-        }, 1000);
+        x++;
+    }, 1000);
 
 }
+
 sort();

@@ -44,15 +44,11 @@ class Matrix {
     }
 
     drawMatrix(matrix) {
-        if(matrix) this.matrix = matrix;
+        if (matrix) this.matrix = matrix;
         for (let y = 0; y < this.matrix.length * this.step; y += this.step) {
             this.drawLine(y, this.step, this.step);
         }
     }
-
-
-
-
 
 
     init() {
