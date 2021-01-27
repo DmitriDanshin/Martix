@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#app{
+    width: 1280px;
+    padding: 12px;
+}
+.cnv{
+    padding: 12px;
+    width: 100%;
+    height: 500px;
+    border: black solid;
+}
