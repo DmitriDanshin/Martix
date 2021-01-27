@@ -18,12 +18,12 @@ class MatrixConstructor{
     getRandomFilledMatrix(){
 
         const rows = new Array(this._rows);
-        const columns = new Array( this._columns);
+        let columns = new Array( this._columns);
         const rowsLength = rows.length;
         const columnsLength = columns.length;
 
         for (let x = 0; x < rowsLength; x++){
-            const columns = new Array( this._columns);
+            columns = new Array( this._columns);
             for(let y = 0; y < columnsLength; y++){
                 columns[y] = this.getRandomIntInclusive(this._min, this._max);
             }
