@@ -19,13 +19,13 @@ class Matrix {
 
         switch (this.matrix[Matrix.row][Matrix.elem]) {
             case 0:
-                context.fillStyle = "Green";
+                context.fillStyle = "#6279ff";
                 break;
             case 1:
-                context.fillStyle = "Blue";
+                context.fillStyle = "#0d320a";
                 break;
             case 2:
-                context.fillStyle = "Yellow";
+                context.fillStyle = "#160e0e";
         }
 
         context.fillRect(x, y, w, h);
@@ -43,11 +43,17 @@ class Matrix {
 
     }
 
-    drawMatrix() {
+    drawMatrix(matrix) {
+        if(matrix) this.matrix = matrix;
         for (let y = 0; y < this.matrix.length * this.step; y += this.step) {
             this.drawLine(y, this.step, this.step);
         }
     }
+
+
+
+
+
 
     init() {
         const canvas = document.createElement("canvas");
